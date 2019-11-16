@@ -1,7 +1,7 @@
 listOfExpenses = [];
-var budget = 300;
-var expenses = 0;
-var balance = budget - expenses;
+var gBudget = 300;
+var gExpenses = 0;
+var gBalance = gBudget - gExpenses;
 
 window.onload = function(){
     //var fs = require('fs');
@@ -9,9 +9,9 @@ window.onload = function(){
     update();
     calculateExpenses();
 
-    document.getElementById("expenses").innerHTML = expenses;
-    document.getElementById("budget").innerHTML = budget;
-    document.getElementById("balance").innerHTML = balance;
+    document.getElementById("expenses").innerHTML = gExpenses;
+    document.getElementById("budget").innerHTML = gBudget;
+    document.getElementById("balance").innerHTML = gBalance;
 };
 
 function addExpense(newvalue){
@@ -24,7 +24,7 @@ function addExpense(newvalue){
 function calculateExpenses(){
     var expenses = document.getElementById("listofexpenses");
     var listItem = document.getElementsByTagName("li");
-    var budget = parseInt(document.getElementById("budget"), 10);
+    var budget = gBudget;
 
     for (var i=0; i < listItem.length; i++){
         listOfExpenses.push(parseInt(listItem[i].innerHTML, 10));
@@ -38,7 +38,7 @@ function calculateExpenses(){
     console.log(listOfExpenses);
     listOfExpenses = [];
     console.log(listOfExpenses);
-    var balance = parseInt(budget - total, 10);
+    var balance = parseInt((budget - total), 10);
     document.getElementById("balance").innerHTML = balance;
     console.log(balance);
 };
