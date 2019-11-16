@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Budget Application</title>
+        <style>
+            body{background-color: black;}
+            body{color: red;}
+            li{list-style-type: none;}
+        </style>
+            <script src="scr.js"></script>
+    </head>
+    <body>
+        <div id="application">
+            <h1>Total Budget:</h1>
+            <p id="budget">0</p>
+            <h2>Expenses:</h2>
+            <p id="expenses">0</p>
+            <ul id="listofexpenses"></ul>
+            <h2>Balance</h2>
+            <p id="balance">0</p>
+            <span>
+                <br>
+                <input type="number" name="newExpense" id="newExpense"><button type="button" onclick="addExpense(document.getElementById('newExpense').value)">Add</button>
+                <br>
+                <button type="button">Save</button><button type="button" onclick="calculateExpenses()">Update</button>
+            </span>
+        </div>
+
+    </body>
+    
+    <!--script src="script.js"></script-->
+</html>
